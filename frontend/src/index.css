@@ -1,0 +1,154 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@layer components {
+  .text-2xs {
+    font-size: 0.65rem;
+    line-height: 0.75rem /* 12px */;
+  }
+  .text-3xs {
+    font-size: 0.55rem;
+    line-height: 0.65rem /* 12px */;
+  }
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("./assets/fonts/Futura-Book-font.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("./assets/fonts/Futura-Bold-font.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("./assets/fonts/Futura-Heavy-font.ttf");
+  font-weight: 600; /* For semi-bold, typically represented as 600 in CSS */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("./assets/fonts/futura-light-bt.ttf");
+  font-weight: 300; /* For light, typically represented as 300 in CSS */
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+  from {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes blinkOutline {
+  0%, 100% {
+    outline: 6px solid #34AAE1;
+  }
+  50% {
+    outline: 6px dashed transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #F6F6F6 !important;
+  height: 100%;
+  min-height: -moz-available; /* WebKit-based browsers will ignore this. */
+  min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  font-family: "Futura", sans-serif;
+}
+
+:root {
+  background-color: #F6F6F6 !important;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p{
+  font-family: "Figtree";
+  line-height: 1.25rem;
+}
+
+.react-flow__attribution {
+  /* Remove the react flow attribution */
+  display: none !important;
+}
+
+.react-flow__controls button {
+  background-color: #050d18 !important;
+  border-radius: 0.375rem !important;
+  color: white !important;
+  border: none;
+  padding: 0.5rem;
+}
+
+.react-flow__controls button:hover {
+  color: #050d18 !important;
+  background-color: #93c5fd !important;
+}
+
+.react-flow__node.selected {
+  outline-offset: 0 !important;
+  border-radius: 0.375rem !important;
+  animation: blinkOutline 2s ease-in-out infinite;
+}
+
+.react-flow__edge.selected {
+  animation: blink 1s infinite;
+  outline-offset: 0 !important;
+}
+
+.prevent-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Alter class for the dropdown  */
+[data-pc-section="input"] {
+  font-size: 0.75rem /* 12px */ !important;
+  line-height: 1rem /* 16px */ !important;
+  padding: 0.625rem /* 10px */;
+}

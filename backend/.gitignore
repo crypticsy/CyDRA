@@ -1,0 +1,6 @@
+__pycache__/
+venv/
+env/
+
+# Ignore all .json files in the data/projects directory
+app/data/projects/*.json

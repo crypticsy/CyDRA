@@ -1,0 +1,28 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #34AAE1B3 #F6F6F6; /* Color of the scrollbar thumb and the track */
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #dfebf5; /* Background color of the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #34AAE1B3; /* Background color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners of the scrollbar thumb */
+  border: 3px solid #dfebf5; /* Border around the scrollbar thumb */
+}
+
+/* Ensuring the hover state matches the normal state */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #34AAE1B3; /* Maintain the background color on hover */
+  border-radius: 10px; /* Maintain the border radius on hover */
+  border: 3px solid #dfebf5; /* Maintain the border color and size on hover */
+}

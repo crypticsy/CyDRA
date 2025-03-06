@@ -1,0 +1,28 @@
+{
+  "situation": [
+    { "name": "initial", "description": "Starting Situation" },
+    { "name": "safe", "description": "Normal Situation" },
+    { "name": "dangerous", "description": "Risky Situation" },
+    { "name": "compromised", "description": "Compromised" },
+    { "name": "terminal", "description": "Ending Situation" },
+    { "name": "unresolved", "description": "Incomplete Situation" }
+  ],
+  "event": [
+    { "name": "generic", "description": "" },
+    { "name": "divergent", "description": "" },
+    { "name": "detection", "description": "" },
+    { "name" : "threat", "description": ""}
+  ],
+  "item": [{ "name": "normal", "description": "" }],
+  "relationship": [
+    {
+      "name": "action",
+      "description": "Situation to Situation"
+    },
+    { "name": "occurrence", "description": "Generic or Divergent Event in Situation" },
+    { "name": "appearance", "description": "Threat Event in Situation" },
+    { "name": "observation", "description": "Detection Event in Situation" },
+    { "name": "crash", "description": "Dangerous Situation to Compromised Situation" },
+    { "name": "presence", "description": "Item in Situation" }
+  ]
+}
