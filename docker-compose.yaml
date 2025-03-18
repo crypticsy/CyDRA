@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  backend:
+    image: sowinskw/cydra-backend:latest
+    container_name: cydra-backend
+    ports:
+      - "8080:8080"
+    networks:
+      - cydra-network
+    restart: unless-stopped
+
+  frontend:
+    image: sowinskw/cydra-frontend:latest
+    container_name: cydra-frontend
+    ports:
+      - "5173:5173"
+    networks:
+      - cydra-network
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  cydra-network:
+    driver: bridge
